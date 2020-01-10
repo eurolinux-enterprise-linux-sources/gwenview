@@ -1,7 +1,7 @@
 Name:    gwenview 
 Summary: An image viewer
 Version: 4.10.5
-Release: 4%{?dist}
+Release: 5%{?dist}
 
 # app: GPLv2+
 # lib:  IJG and (LGPLv2 or LGPLv3 or LGPLv3+ (KDE e.V.)) and LGPLv2+ and GPLv2+
@@ -109,6 +109,10 @@ fi
 
 
 %changelog
+* Wed Sep 06 2017 Jan Grulich <jgrulich@redhat.com> - 4.10.5-5
+- Rebuild exiv2
+  Resolves: bz#1488007
+
 * Tue Mar 29 2016 Jan Grulich <jgrulich@redhat.com> - 4.10.5-4
 - Fix documentation about importer
   Resolves: bz#1064200
