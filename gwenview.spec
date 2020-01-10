@@ -1,7 +1,7 @@
 Name:    gwenview 
 Summary: An image viewer
 Version: 4.10.5
-Release: 3%{?dist}
+Release: 4%{?dist}
 
 # app: GPLv2+
 # lib:  IJG and (LGPLv2 or LGPLv3 or LGPLv3+ (KDE e.V.)) and LGPLv2+ and GPLv2+
@@ -15,6 +15,8 @@ URL:     https://projects.kde.org/projects/kde/kdegraphics/gwenview
 %endif 
 Source0: http://download.kde.org/%{stable}/%{version}/src/%{name}-%{version}.tar.xz
 
+Patch0:  gwenview-fix-documentation-about-importer.patch
+
 BuildRequires: desktop-file-utils
 BuildRequires: kactivities-devel >= %{version}
 # libkonq
@@ -27,7 +29,7 @@ BuildRequires: pkgconfig(lcms2)
 BuildRequires: pkgconfig(libpng)
 
 Requires: %{name}-libs%{?_isa} = %{version}-%{release}
-Requires: kde-runtime%{?_kde4_version: >= %{_kde4_version}}
+Requires: kde-runtime >= 4.10.5
 
 # when split occurred
 Conflicts: kdegraphics < 7:4.6.95-10
@@ -47,6 +49,7 @@ Requires: %{name} = %{version}-%{release}
 %prep
 %setup -q
 
+%patch0 -p1 -b .fix-documentation-about-importer.patch
 
 %build
 mkdir -p %{_target_platform}
@@ -106,6 +109,10 @@ fi
 
 
 %changelog
+* Tue Mar 29 2016 Jan Grulich <jgrulich@redhat.com> - 4.10.5-4
+- Fix documentation about importer
+  Resolves: bz#1064200
+
 * Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 4.10.5-3
 - Mass rebuild 2014-01-24
 

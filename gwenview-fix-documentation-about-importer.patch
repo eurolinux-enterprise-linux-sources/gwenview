@@ -1,0 +1,35 @@
+diff --git a/doc/index.docbook b/doc/index.docbook
+index 175930c..1c3ee6b 100644
+--- a/doc/index.docbook
++++ b/doc/index.docbook
+@@ -390,9 +390,7 @@ in the &kde; Device Notifier after connecting a supported device.</para>
+   </mediaobject>
+ </screenshot>
+ 
+-</sect1>
+-
+-<sect1>
++<sect2>
+ <title>Importing Images</title>
+ <para>If you wish, you may select the images you want to import under
+ <guilabel>Select the documents to import</guilabel> by pressing the <guiicon>+</guiicon>
+@@ -403,9 +401,9 @@ button to the right of the text box.  When you are done, click the
+ <guibutton>Import Selected</guibutton> button to import only the images you have
+ selected, or click <guibutton>Import All</guibutton> to import all images found
+ on the device.</para>
+-</sect1>
++</sect2>
+ 
+-<sect1>
++<sect2>
+ <title>Automatic Renaming</title>
+ <para>&kappname; Importer can rename your files according to a specified pattern.
+ To configure this, select the <guibutton>Settings</guibutton> in the lower left
+@@ -414,6 +412,7 @@ corner.  You may turn this feature on or off using the checkbox at the top.  The
+ be replaced by metadata such as the date the image was created or its filename.
+ They are listed below the text box.  You may either click on the parameter name to
+ enter it into the text box or type one manually.</para>
++</sect2>
+ </sect1>
+ 
+ </chapter>
